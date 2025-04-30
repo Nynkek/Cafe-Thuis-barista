@@ -1,0 +1,30 @@
+.sliderItem {
+    cursor: pointer;
+    border: 2px solid #744b39;
+    border-radius: 2em;
+    padding: 16px;
+    min-width: 150px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+  }
+  
+  .sliderItem:hover {
+    background-color: #8b8b6c;
+  }
+  
+  .selected {
+    border-color: #744b39;
+    background-color: #8b8b6c;
+  }
+  
+  .image {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 8px;
+  }
+  
+  .name {
+    font-weight: 500;
+  }

@@ -1,0 +1,19 @@
+:root {
+    font-family: sans-serif;
+    background-color: #d2dfd8;
+    color: #404643;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Alegreya Sans", sans-serif;
+    color: #ce252a
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+img {
+    border-radius: 15px;
+}
