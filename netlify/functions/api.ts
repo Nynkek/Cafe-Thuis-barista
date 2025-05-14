@@ -1,4 +1,4 @@
-const serverless = require("serverless-http");
-const app = require("../../backend/"); // Import your Express app from the backend folder
+import serverless from "serverless-http";
+import app from "../../backend/src"; // Adjust the path to point to your Express app file
 
-exports.handler = serverless(app);
+export const handler = serverless(app);

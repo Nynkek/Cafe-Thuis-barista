@@ -79,3 +79,5 @@ app.get('/api/brewMethods', (_req: Request, res: Response) => {
 app.listen(PORT, () => {
   console.log(`☕️ Coffee API draait op http://localhost:${PORT}`);
 });
+
+export default app; 
