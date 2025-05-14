@@ -3,6 +3,8 @@ import cors from 'cors';
 import { DrinkType } from './models/DrinkType';
 import { BrewMethod } from './models/BrewMethod';
 import { Recipe } from './models/Recipe';
+export { app };
+
 
 const app = express();
 const PORT = 3001;
@@ -76,8 +78,10 @@ app.get('/api/brewMethods', (_req: Request, res: Response) => {
     res.json(brewMethods);
 });
 
-app.listen(PORT, () => {
-  console.log(`☕️ Coffee API draait op http://localhost:${PORT}`);
-});
+// Only start the server if we're not in a Netlify Function environment
+if (process.env.NETLIFY !== 'true') {
+    app.listen(PORT, () => {
+      console.log(`☕️ Coffee API draait op http://localhost:${PORT}`);
+    });
+  }
 
-export default app; 
