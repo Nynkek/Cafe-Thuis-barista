@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import styles from './MailButton.module.css';
-import { BARISTA_EMAIL, BARISTA_NAME, ORDERER_NAME } from '../config'; 
+import { BARISTA_EMAIL, BARISTA_NAME, ORDERER_NAME } from '../config-example'; 
 
 
 
