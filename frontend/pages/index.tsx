@@ -16,12 +16,14 @@ const IndexPage = () => {
   const selectedDrinkType = drinkTypes.find(x => x.id === selectedDrinkTypeId);
   const selectedBrewMethod = brewMethods.find(x => x.id === selectedBrewMethodId);
 
+  const BACKEND_API = process.env.BACKEND_API as string;
+
 
   useEffect(() => {
     const fetchData = async () => {
       // TODO:  const drinksRes = await fetch('http://localhost:3001/api/drinkTypes');
-      const drinksRes = await fetch('/drinkTypes');
-      const brewRes = await fetch('/brewMethods');
+      const drinksRes = await fetch(BACKEND_API + 'api/drinkTypes');
+      const brewRes = await fetch(BACKEND_API + '/brewMethods');
 
       const drinks = await drinksRes.json();
       const brews = await brewRes.json();
