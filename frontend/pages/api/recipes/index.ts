@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const BACKEND_API = process.env.BACKEND_API as string;
-const URL = "/api/recipes";
+const URL = "/recipes";
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {

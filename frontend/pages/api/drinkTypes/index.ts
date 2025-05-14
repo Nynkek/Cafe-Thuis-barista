@@ -5,7 +5,7 @@ const URL = "api/drinkTypes";
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const response = await fetch(BACKEND_API);
+    const response = await fetch(BACKEND_API+URL);
 
     if (!response.ok) {
       throw new Error(`Backend error: ${response.status}`);
