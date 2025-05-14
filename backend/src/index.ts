@@ -7,7 +7,7 @@ export { app };
 
 
 const app = express();
-const PORT = 3001;
+// const PORT = 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -62,26 +62,25 @@ const recipes : Recipe[] = [recipe01];
 const brewMethods : BrewMethod[] = [brewMethod1, brewMethod2, brewMethod3];
  
 
-app.get('/api/coffee', (_req: Request, res: Response) => {
+app.get('/coffee', (_req: Request, res: Response) => {
   res.json(coffeeTypes);
 });
 
-app.get('/api/drinkTypes', (_req: Request, res: Response) => {
+app.get('/drinkTypes', (_req: Request, res: Response) => {
     res.json(drinkTypes);
 });
 
-app.get('/api/recipes', (_req: Request, res: Response) => {
+app.get('/recipes', (_req: Request, res: Response) => {
     res.json(recipes);
 });
 
-app.get('/api/brewMethods', (_req: Request, res: Response) => {
+app.get('/brewMethods', (_req: Request, res: Response) => {
     res.json(brewMethods);
 });
 
 // Only start the server if we're not in a Netlify Function environment
-if (process.env.NETLIFY !== 'true') {
-    app.listen(PORT, () => {
-      console.log(`☕️ Coffee API draait op http://localhost:${PORT}`);
-    });
-  }
-
+// if (process.env.NETLIFY !== 'true') {
+//     app.listen(PORT, () => {
+//       console.log(`☕️ Coffee API draait op http://localhost:${PORT}`);
+//     });
+// }
