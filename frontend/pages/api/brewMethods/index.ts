@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const BACKEND_API = "http://localhost:3001/api/brewMethods";
+const BACKEND_API = process.env.BACKEND_API as string;
+const URL = "/api/brewMethods";
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const response = await fetch(BACKEND_API);
+    const response = await fetch(BACKEND_API+URL);
 
     if (!response.ok) {
       throw new Error(`Backend error: ${response.status}`);

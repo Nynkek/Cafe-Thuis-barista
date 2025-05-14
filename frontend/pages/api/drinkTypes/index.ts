@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const BACKEND_API = "http://localhost:3001/api/drinkTypes";
+const BACKEND_API = process.env.BACKEND_API as string;
+const URL = "api/drinkTypes";
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
