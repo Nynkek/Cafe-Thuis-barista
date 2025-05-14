@@ -33,7 +33,7 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="cafe Thuis">
       <h1>Home barista</h1>
       <p className="">Bestel hier je koffie bij PimNynke thuis!</p>
 
