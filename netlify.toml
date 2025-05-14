@@ -1,20 +1,20 @@
 [build]
-  base = "/frontend"
-  publish = "/.next"
+  base = "frontend"
+  publish = ".next"
   command = "npm run build"
 
-[build.environment]
-  NODE_VERSION = "18"
+[functions]
+  directory = "netlify/functions"
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
-
 [[redirects]]
-  force = true
   from = "/api/*"
-  status = 200
   to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+  

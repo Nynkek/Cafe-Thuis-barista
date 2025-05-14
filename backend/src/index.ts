@@ -64,7 +64,7 @@ app.get('/coffee', (_req: Request, res: Response) => {
   res.json(coffeeTypes);
 });
 
-app.get('/drinkTypes', (_req: Request, res: Response) => {
+app.get('api/drinkTypes', (_req: Request, res: Response) => {
     res.json(drinkTypes);
 });
 

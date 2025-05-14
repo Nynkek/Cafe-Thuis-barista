@@ -1,10 +1,4 @@
 import serverless from 'serverless-http';
-import express from 'express';
-
-const app = express();
-
-app.get('/recipes', (req, res) => {
-  res.json({ recipes: ['Pizza', 'Pasta'] });
-});
+import { app } from '../../backend/src/index.ts';
 
 export const handler = serverless(app);
