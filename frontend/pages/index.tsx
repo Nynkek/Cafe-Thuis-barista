@@ -20,8 +20,8 @@ const IndexPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       // TODO:  const drinksRes = await fetch('http://localhost:3001/api/drinkTypes');
-      const drinksRes = await fetch('/api/drinkTypes');
-      const brewRes = await fetch('http://localhost:3001/api/brewMethods');
+      const drinksRes = await fetch('/drinkTypes');
+      const brewRes = await fetch('/brewMethods');
 
       const drinks = await drinksRes.json();
       const brews = await brewRes.json();
